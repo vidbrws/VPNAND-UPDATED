@@ -36,7 +36,7 @@ const ItemDescription = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "text-md flex max-w-[300px] flex-col gap-2 text-balance text-muted-foreground",
+      "flex max-w-[240px] flex-col gap-2 text-balance text-sm text-muted-foreground",
       className,
     )}
     {...props}
