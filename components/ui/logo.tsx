@@ -29,7 +29,7 @@ export default function Logo({
         width={width}
         height={height}
         aria-hidden="true"
-        className="max-h-full max-w-full"
+        className="max-h-full max-w-full opacity-70"
       />
       <span className={cn(!showName && "sr-only")}>{name}</span>
       {version && <span className="text-muted-foreground">{version}</span>}
