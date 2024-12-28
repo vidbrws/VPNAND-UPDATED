@@ -10,6 +10,9 @@ export const siteConfig = {
     twitter: "https://twitter.com/mikolajdobrucki",
     github: "https://github.com/launch-ui/launch-ui",
   },
+  stats: {
+    updated: "2024-12-28",
+  },
 };
 
 export type SiteConfig = typeof siteConfig;
