@@ -22,10 +22,10 @@ export default function Logos() {
         </div>
         <div className="flex flex-wrap items-center justify-center gap-8">
           <Logo image={Figma} name="Figma" />
-          <Logo image={React} name="React" version="18.3.1" />
-          <Logo image={TypeScript} name="TypeScript" version="5.6.2" />
-          <Logo image={ShadcnUi} name="Shadcn/ui" version="2.0.7" />
-          <Logo image={Tailwind} name="Tailwind" version="3.4.11" />
+          <Logo image={React} name="React" version="19.0.0" />
+          <Logo image={TypeScript} name="TypeScript" version="5.6.3" />
+          <Logo image={ShadcnUi} name="Shadcn/ui" version="2.1.8" />
+          <Logo image={Tailwind} name="Tailwind" version="3.4.14" />
         </div>
       </div>
     </Section>

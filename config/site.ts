@@ -5,13 +5,13 @@ export const siteConfig = {
     "https://launchuicomponents.com/docs/getting-started/introduction",
   ogImage: "https://launchuicomponents.com/og.jpg",
   description:
-    "Landing page template built with React, Shadcn/ui and Tailwind that you can copy/paste into your project.",
+    "Landing page components built with React, Shadcn/ui and Tailwind that will make your website feel premium.",
   links: {
     twitter: "https://twitter.com/mikolajdobrucki",
     github: "https://github.com/launch-ui/launch-ui",
   },
   stats: {
-    updated: "2024-12-28",
+    updated: "2024-12-29",
   },
 };
 
