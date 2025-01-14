@@ -11,8 +11,8 @@ import { siteConfig } from "@/config/site";
 export default function Logos() {
   return (
     <Section>
-      <div className="mx-auto flex max-w-container flex-col items-center gap-16 text-center">
-        <div className="flex flex-col items-center gap-4">
+      <div className="mx-auto flex max-w-container flex-col items-center gap-8 text-center">
+        <div className="flex flex-col items-center gap-6">
           <Badge variant="outline" className="border-brand/30 text-brand">
             Last updated: {siteConfig.stats.updated}
           </Badge>
