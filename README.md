@@ -46,6 +46,7 @@ npm run dev
 - **Items**: Flexible grid system for feature lists, pricing tables, and product showcases. Includes both default and branded variants with responsive layouts
 - **Logos**: Clean logo showcase component with static grid layout. Perfect for displaying brand partnerships and client logos with consistent styling
 - **FAQ**: Comprehensive FAQ component with expandable accordions. Features smooth animations and responsive design for optimal user experience
+- **Stats**: Versatile statistics display component with horizontal, tiles, and grid layouts. Perfect for showcasing statistics, big numbers, key metrics and data points
 - **CTA**: Powerful call-to-action component with multiple styles including box layouts and beam effects. Designed to create compelling sections that drive user engagement
 - **Footer**: Versatile footer with multiple layout variants including default, minimal, and multi-column styles. Perfect for organizing site information and links
 
@@ -55,6 +56,7 @@ npm run dev
 - **Feature**: Sophisticated feature showcase with flexible illustration placements and mockup displays. Includes multiple layout options while maintaining shadcn's consistent design language
 - **Social Proof**: Advanced social proof displays with masonry layouts, marquee animations, and clickable cards. Built for showcasing user feedback in engaging ways
 - **Tabs**: Fully customizable tabs with left, top, and bottom alignments. Built with accessibility in mind for seamless content organization
+- **Carousel**: Dynamic carousel component with multiple variants. Features smooth animations, responsive design, and customizable navigation controls
 - **Testimonials**: Comprehensive testimonials component with grid layouts, carousels, and static displays. Designed for beautiful, accessible customer feedback showcases
 
 ## 🛠️ Tech Stack
