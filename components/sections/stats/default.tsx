@@ -1,4 +1,4 @@
-import { Section } from "@/components/launch-ui/ui/section";
+import { Section } from "../../ui/section";
 import { siteConfig } from "@/config/site";
 
 export default function Stats() {

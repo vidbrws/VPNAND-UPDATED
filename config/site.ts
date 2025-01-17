@@ -12,6 +12,10 @@ export const siteConfig = {
   },
   stats: {
     updated: "2024-12-29",
+    figma: "1,159",
+    github: "178",
+    cli: "161",
+    components: "121",
   },
 };
 
