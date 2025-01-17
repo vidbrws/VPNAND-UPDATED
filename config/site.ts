@@ -9,6 +9,7 @@ export const siteConfig = {
   links: {
     twitter: "https://twitter.com/mikolajdobrucki",
     github: "https://github.com/launch-ui/launch-ui",
+    email: "mailto:contact@mikolajdobrucki.com",
   },
   stats: {
     updated: "2024-12-29",
