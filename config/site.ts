@@ -17,6 +17,9 @@ export const siteConfig = {
     github: "178",
     cli: "161",
     components: "121",
+    sections: "62",
+    illustrations: "16",
+    animations: "15",
   },
 };
 
