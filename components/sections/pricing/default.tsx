@@ -81,7 +81,7 @@ const plans: Plan[] = [
   },
 ];
 
-export function Pricing() {
+export default function Pricing() {
   return (
     <Section>
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-12">
