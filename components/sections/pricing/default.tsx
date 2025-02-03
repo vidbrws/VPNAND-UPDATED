@@ -33,8 +33,8 @@ const plans: Plan[] = [
       href: "/docs/getting-started/introduction",
     },
     features: [
-      "8 landing page sections",
-      "35 components",
+      "9 landing page sections",
+      "36 components",
       "5 custom animations",
     ],
     featured: false,
