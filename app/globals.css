@@ -75,6 +75,28 @@
   }
 }
 
+@layer components {
+  .glass-1 {
+    @apply border border-b-0 border-border/5 border-t-border/10 bg-gradient-to-b from-card/5 to-card/0;
+  }
+
+  .glass-2 {
+    @apply border border-b-0 border-border/5 border-t-border/10 bg-gradient-to-b from-card/10 to-card/5;
+  }
+
+  .glass-3 {
+    @apply border border-b-0 border-border/5 border-t-border/15 bg-gradient-to-b from-card/30 to-card/20;
+  }
+
+  .glass-4 {
+    @apply border border-b-0 border-border/5 border-t-border/20 bg-gradient-to-b from-primary/10 to-primary/5;
+  }
+
+  .glass-5 {
+    @apply border border-b-0 border-border/5 border-t-border/25 bg-gradient-to-b from-primary/15 to-primary/5;
+  }
+}
+
 @layer utilities {
   .fade-x {
     mask-image: linear-gradient(

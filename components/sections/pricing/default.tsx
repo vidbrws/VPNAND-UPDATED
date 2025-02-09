@@ -38,7 +38,7 @@ const plans: Plan[] = [
       "5 custom animations",
     ],
     featured: false,
-    classes: "bg-transparent border border-input hidden lg:flex",
+    classes: "glass-2 hidden lg:flex",
   },
   {
     name: "Pro",
@@ -59,7 +59,7 @@ const plans: Plan[] = [
     ],
     featured: true,
     classes:
-      "after:content-[''] after:absolute after:-top-[128px] after:left-1/2 after:h-[128px] after:w-[100%] after:max-w-[960px] after:-translate-x-1/2 after:rounded-[50%] after:bg-brand-foreground/70 after:blur-[72px]",
+      "glass-4 border-t-0 after:content-[''] after:absolute after:-top-[128px] after:left-1/2 after:h-[128px] after:w-[100%] after:max-w-[960px] after:-translate-x-1/2 after:rounded-[50%] after:bg-brand-foreground/70 after:blur-[72px]",
   },
   {
     name: "Pro Team",
@@ -77,7 +77,7 @@ const plans: Plan[] = [
     ],
     featured: false,
     classes:
-      "after:content-[''] after:absolute after:-top-[128px] after:left-1/2 after:h-[128px] after:w-[100%] after:max-w-[960px] after:-translate-x-1/2 after:rounded-[50%] after:bg-primary/30 after:blur-[72px]",
+      "glass-3 border-t-0 after:content-[''] after:absolute after:-top-[128px] after:left-1/2 after:h-[128px] after:w-[100%] after:max-w-[960px] after:-translate-x-1/2 after:rounded-[50%] after:bg-primary/30 after:blur-[72px]",
   },
 ];
 
@@ -99,7 +99,7 @@ export default function Pricing() {
             <div
               key={plan.name}
               className={cn(
-                "relative flex max-w-container flex-col gap-6 overflow-hidden rounded-2xl bg-primary/5 p-8",
+                "relative flex max-w-container flex-col gap-6 overflow-hidden rounded-2xl p-8",
                 plan.classes,
               )}
             >
