@@ -5,36 +5,58 @@ export default function Stats() {
   return (
     <Section>
       <div className="container mx-auto max-w-[960px]">
-        <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-foreground to-muted-foreground/40 bg-clip-text text-4xl font-semibold text-transparent drop-shadow-[1px_1px_1px_hsl(var(--brand-foreground))] hover:to-muted-foreground hover:drop-shadow-[2px_1px_2px_hsl(var(--brand-foreground))] sm:text-5xl md:text-6xl">
-              {siteConfig.stats.figma}
+        <div className="grid grid-cols-2 gap-12 sm:grid-cols-4">
+          <div className="flex flex-col items-start gap-3 text-left">
+            <div className="text-sm font-semibold text-muted-foreground">
+              used by
             </div>
-            <div className="mt-2 text-sm text-muted-foreground">
-              Figma users
+            <div className="flex items-baseline gap-2">
+              <div className="bg-gradient-to-r from-foreground to-brand bg-clip-text text-4xl font-medium text-transparent drop-shadow-[2px_1px_24px_hsla(var(--brand-foreground))] transition-all duration-300 sm:text-5xl md:text-6xl">
+                {Math.round(siteConfig.stats.figma / 100) / 10}
+              </div>
+              <div className="text-2xl font-semibold text-brand">k</div>
             </div>
-          </div>
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-foreground to-muted-foreground/40 bg-clip-text text-4xl font-semibold text-transparent drop-shadow-[1px_1px_1px_hsl(var(--brand-foreground))] hover:to-muted-foreground hover:drop-shadow-[2px_1px_2px_hsl(var(--brand-foreground))] sm:text-5xl md:text-6xl">
-              {siteConfig.stats.github}
-            </div>
-            <div className="mt-2 text-sm text-muted-foreground">
-              Github clones
+            <div className="text-pretty text-sm font-semibold text-muted-foreground">
+              designers on Figma Community
             </div>
           </div>
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-foreground to-muted-foreground/40 bg-clip-text text-4xl font-semibold text-transparent drop-shadow-[1px_1px_1px_hsl(var(--brand-foreground))] hover:to-muted-foreground hover:drop-shadow-[2px_1px_2px_hsl(var(--brand-foreground))] sm:text-5xl md:text-6xl">
-              {siteConfig.stats.cli}
+          <div className="flex flex-col items-start gap-3 text-left">
+            <div className="text-sm font-semibold text-muted-foreground">
+              over
             </div>
-            <div className="mt-2 text-sm text-muted-foreground">
-              CLI installations
+            <div className="flex items-baseline gap-2">
+              <div className="bg-gradient-to-r from-foreground to-brand bg-clip-text text-4xl font-medium text-transparent drop-shadow-[2px_1px_24px_hsla(var(--brand-foreground))] transition-all duration-300 sm:text-5xl md:text-6xl">
+                {siteConfig.stats.github}
+              </div>
+            </div>
+            <div className="text-pretty text-sm font-semibold text-muted-foreground">
+              clones and forks of the template on Github
             </div>
           </div>
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-foreground to-muted-foreground/40 bg-clip-text text-4xl font-semibold text-transparent drop-shadow-[1px_1px_1px_hsl(var(--brand-foreground))] hover:to-muted-foreground hover:drop-shadow-[2px_1px_2px_hsl(var(--brand-foreground))] sm:text-5xl md:text-6xl">
+          <div className="flex flex-col items-start gap-3 text-left">
+            <div className="text-sm font-semibold text-muted-foreground">
+              already
+            </div>
+            <div className="flex items-baseline gap-2">
+              <div className="bg-gradient-to-r from-foreground to-brand bg-clip-text text-4xl font-medium text-transparent drop-shadow-[2px_1px_24px_hsla(var(--brand-foreground))] transition-all duration-300 sm:text-5xl md:text-6xl">
+                {Math.round(siteConfig.stats.cli / 100) / 10}
+              </div>
+              <div className="text-2xl font-semibold text-brand">k</div>
+            </div>
+            <div className="text-pretty text-sm font-semibold text-muted-foreground">
+              installations with shadcn/ui CLI
+            </div>
+          </div>
+          <div className="flex flex-col items-start gap-3 text-left">
+            <div className="text-sm font-semibold text-muted-foreground">
+              includes
+            </div>
+            <div className="bg-gradient-to-r from-foreground to-brand bg-clip-text text-4xl font-medium text-transparent drop-shadow-[2px_1px_24px_hsla(var(--brand-foreground))] transition-all duration-300 sm:text-5xl md:text-6xl">
               {siteConfig.stats.components}
             </div>
-            <div className="mt-2 text-sm text-muted-foreground">Components</div>
+            <div className="text-pretty text-sm font-semibold text-muted-foreground">
+              React components and sections
+            </div>
           </div>
         </div>
       </div>
