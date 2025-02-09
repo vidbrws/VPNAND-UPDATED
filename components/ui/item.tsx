@@ -21,7 +21,7 @@ const ItemTitle = React.forwardRef<
   <h3
     ref={ref}
     className={cn(
-      "text-md font-semibold leading-none tracking-tight",
+      "text-sm font-semibold leading-none tracking-tight sm:text-base",
       className,
     )}
     {...props}

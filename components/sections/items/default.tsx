@@ -18,7 +18,7 @@ export default function Items() {
         <h2 className="max-w-[560px] text-center text-3xl font-semibold leading-tight sm:text-5xl sm:leading-tight">
           Everything you need. Nothing you don&apos;t.
         </h2>
-        <div className="grid auto-rows-fr grid-cols-1 gap-0 sm:grid-cols-2 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid auto-rows-fr grid-cols-2 gap-0 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
           <Item>
             <ItemTitle className="flex items-center gap-2">
               <ItemIcon>
