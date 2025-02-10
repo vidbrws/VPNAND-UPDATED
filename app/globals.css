@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 0 5.9% 95%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
@@ -14,14 +14,14 @@
     --primary-foreground: 0 0% 98%;
     --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
+    --muted: 240 4.8% 94.9%;
     --muted-foreground: 240 10% 3.9%;
     --accent: 240 5% 64.9%;
     --accent-foreground: 240 5.9% 10%;
     --destructive: 0 72.22% 50.59%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 5.2% 33.9%;
-    --input: 240 5.9% 90%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 85%;
     --ring: 240 5% 64.9%;
     --radius: 0.5rem;
 
@@ -31,9 +31,16 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
 
-    --brand: 27 96% 61%;
-    --brand-foreground: 31 97% 72%;
+    --brand: 25 90% 48%; /* orange-300 */
+    --brand-foreground: 27 96% 61%; /* orange-400 */
+
+    --light: var(--brand);
+    --light-foreground: var(--brand-foreground);
+
+    --shadow: #00000008;
+    --shadow-strong: #00000008;
   }
+
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -63,6 +70,12 @@
 
     --brand: 31 97% 72%;
     --brand-foreground: 27 96% 61%;
+
+    --light: var(--foreground);
+    --light-foreground: var(--foreground);
+
+    --shadow: #00000020;
+    --shadow-strong: #00000088;
   }
 }
 
@@ -77,11 +90,11 @@
 
 @layer components {
   .glass-1 {
-    @apply border border-b-0 border-border/5 border-t-border/10 bg-gradient-to-b from-card/5 to-card/0;
+    @apply border border-border/15 bg-gradient-to-b from-card/80 to-card/40 dark:border-b-0 dark:border-border/5 dark:border-t-border/10 dark:from-card/5 dark:to-card/0;
   }
 
   .glass-2 {
-    @apply border border-b-0 border-border/5 border-t-border/10 bg-gradient-to-b from-card/10 to-card/5;
+    @apply border border-border/15 border-t-border/10 bg-gradient-to-b from-card/100 to-card/80 dark:border-b-0 dark:border-border/5 dark:border-t-border/10 dark:from-card/10 dark:to-card/5;
   }
 
   .glass-3 {
@@ -89,11 +102,11 @@
   }
 
   .glass-4 {
-    @apply border border-b-0 border-border/5 border-t-border/20 bg-gradient-to-b from-primary/10 to-primary/5;
+    @apply border border-border/100 border-b-input bg-gradient-to-b from-card/60 to-card/20 dark:border-b-0 dark:border-border/5 dark:border-t-border/20 dark:from-primary/10 dark:to-primary/5;
   }
 
   .glass-5 {
-    @apply border border-b-0 border-border/5 border-t-border/25 bg-gradient-to-b from-primary/15 to-primary/5;
+    @apply border border-border/100 border-b-input bg-gradient-to-b from-card/100 to-card/20 dark:border-b-0 dark:border-border/5 dark:border-t-border/20 dark:from-primary/15 dark:to-primary/5;
   }
 }
 

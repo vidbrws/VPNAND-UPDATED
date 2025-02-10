@@ -13,9 +13,9 @@ export default function Home() {
     <main className="min-h-screen w-full overflow-hidden bg-background text-foreground">
       <Navbar />
       <Hero />
-      <Stats />
       <Logos />
       <Items />
+      <Stats />
       <Pricing />
       <FAQ />
       <CTA />

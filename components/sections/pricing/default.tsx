@@ -38,7 +38,7 @@ const plans: Plan[] = [
       "5 custom animations",
     ],
     featured: false,
-    classes: "glass-2 hidden lg:flex",
+    classes: "glass-4 to-transparent dark:glass-2 hidden lg:flex",
   },
   {
     name: "Pro",
@@ -59,7 +59,7 @@ const plans: Plan[] = [
     ],
     featured: true,
     classes:
-      "glass-4 border-t-0 after:content-[''] after:absolute after:-top-[128px] after:left-1/2 after:h-[128px] after:w-[100%] after:max-w-[960px] after:-translate-x-1/2 after:rounded-[50%] after:bg-brand-foreground/70 after:blur-[72px]",
+      "glass-5 from-card/100 to-card/100 dark:glass-4 border-t-0 after:content-[''] after:absolute after:-top-[128px] after:left-1/2 after:h-[128px] after:w-[100%] after:max-w-[960px] after:-translate-x-1/2 after:rounded-[50%] after:bg-brand-foreground/70 after:blur-[72px]",
   },
   {
     name: "Pro Team",
@@ -77,7 +77,7 @@ const plans: Plan[] = [
     ],
     featured: false,
     classes:
-      "glass-3 border-t-0 after:content-[''] after:absolute after:-top-[128px] after:left-1/2 after:h-[128px] after:w-[100%] after:max-w-[960px] after:-translate-x-1/2 after:rounded-[50%] after:bg-primary/30 after:blur-[72px]",
+      "glass-4 to-trasparent dark:glass-3 border-t-0 after:content-[''] after:absolute after:-top-[128px] after:left-1/2 after:h-[128px] after:w-[100%] after:max-w-[960px] after:-translate-x-1/2 after:rounded-[50%] dark:after:bg-primary/30 after:blur-[72px]",
   },
 ];
 

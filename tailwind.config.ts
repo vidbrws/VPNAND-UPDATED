@@ -175,9 +175,13 @@ const config = {
         container: "1280px",
       },
       boxShadow: {
+        md: "0 4px 6px -1px var(--shadow), 0 2px 4px -2px var(--shadow)",
+        xl: "0 20px 25px -5px var(--shadow), 0 8px 10px -6px var(--shadow)",
+        "2xl": "0 25px 50px -12px var(--shadow)",
         "glow-sm": "0 0 16px 0 hsla(var(--foreground) / 0.08) inset",
         "glow-md": "0 0 32px 0 hsla(var(--foreground) / 0.08) inset",
         "glow-lg": "0 0 64px 0 hsla(var(--foreground) / 0.06) inset",
+        mockup: "-12px 16px 48px var(--shadow-strong)",
       },
     },
   },
