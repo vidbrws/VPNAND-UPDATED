@@ -77,7 +77,7 @@ const plans: Plan[] = [
     ],
     featured: false,
     classes:
-      "glass-4 to-trasparent dark:glass-3 border-t-0 after:content-[''] after:absolute after:-top-[128px] after:left-1/2 after:h-[128px] after:w-[100%] after:max-w-[960px] after:-translate-x-1/2 after:rounded-[50%] dark:after:bg-primary/30 after:blur-[72px]",
+      "glass-4 to-trasparent dark:glass-3 border-t-0 after:content-[''] after:absolute after:-top-[128px] after:left-1/2 after:h-[128px] after:w-[100%] after:max-w-[960px] after:-translate-x-1/2 after:rounded-[50%] dark:after:bg-foreground/30 after:blur-[72px]",
   },
 ];
 

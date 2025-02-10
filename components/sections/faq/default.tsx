@@ -95,7 +95,7 @@ export default function FAQ() {
               </p>
               <p className="mb-4 max-w-[580px] text-muted-foreground">
                 For complete details about licensing and usage rights, check out{" "}
-                <Link href="/pricing" className="text-primary underline">
+                <Link href="/pricing" className="text-foreground underline">
                   the pricing page
                 </Link>
                 .
@@ -111,7 +111,7 @@ export default function FAQ() {
                 the{" "}
                 <Link
                   href="https://www.figma.com/community/file/1420131743903900629/launch-ui-landing-page-components-ui-kit"
-                  className="text-primary underline"
+                  className="text-foreground underline"
                 >
                   Figma community
                 </Link>
@@ -134,7 +134,7 @@ export default function FAQ() {
                 If this interests you, don&apos;t hesitate to{" "}
                 <Link
                   href={siteConfig.links.email}
-                  className="text-primary underline"
+                  className="text-foreground underline"
                 >
                   reach out by email
                 </Link>
