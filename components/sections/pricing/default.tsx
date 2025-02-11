@@ -12,7 +12,7 @@ type Plan = {
   price: number;
   priceNote: string;
   cta: {
-    variant: "outline" | "default";
+    variant: "glow" | "default";
     label: string;
     href: string;
   };
@@ -28,7 +28,7 @@ const plans: Plan[] = [
     price: 0,
     priceNote: "Free and open-source forever.",
     cta: {
-      variant: "outline",
+      variant: "glow",
       label: "Get started for free",
       href: "/docs/getting-started/introduction",
     },
@@ -38,7 +38,7 @@ const plans: Plan[] = [
       "5 custom animations",
     ],
     featured: false,
-    classes: "glass-4 to-transparent dark:glass-2 hidden lg:flex",
+    classes: "glass-1 to-transparent dark:glass-2 hidden lg:flex",
   },
   {
     name: "Pro",
@@ -59,7 +59,7 @@ const plans: Plan[] = [
     ],
     featured: true,
     classes:
-      "glass-5 from-card/100 to-card/100 dark:glass-4 border-t-0 after:content-[''] after:absolute after:-top-[128px] after:left-1/2 after:h-[128px] after:w-[100%] after:max-w-[960px] after:-translate-x-1/2 after:rounded-[50%] after:bg-brand-foreground/70 after:blur-[72px]",
+      "glass-3 from-card/100 to-card/100 dark:glass-4 after:content-[''] after:absolute after:-top-[128px] after:left-1/2 after:h-[128px] after:w-[100%] after:max-w-[960px] after:-translate-x-1/2 after:rounded-[50%] after:bg-brand-foreground/70 after:blur-[72px]",
   },
   {
     name: "Pro Team",
@@ -77,7 +77,7 @@ const plans: Plan[] = [
     ],
     featured: false,
     classes:
-      "glass-4 to-trasparent dark:glass-3 border-t-0 after:content-[''] after:absolute after:-top-[128px] after:left-1/2 after:h-[128px] after:w-[100%] after:max-w-[960px] after:-translate-x-1/2 after:rounded-[50%] dark:after:bg-foreground/30 after:blur-[72px]",
+      "glass-2 to-trasparent dark:glass-3 after:content-[''] after:absolute after:-top-[128px] after:left-1/2 after:h-[128px] after:w-[100%] after:max-w-[960px] after:-translate-x-1/2 after:rounded-[50%] dark:after:bg-foreground/30 after:blur-[72px]",
   },
 ];
 
@@ -99,7 +99,7 @@ export default function Pricing() {
             <div
               key={plan.name}
               className={cn(
-                "relative flex max-w-container flex-col gap-6 overflow-hidden rounded-2xl p-8",
+                "relative flex max-w-container flex-col gap-6 overflow-hidden rounded-2xl p-8 shadow-xl",
                 plan.classes,
               )}
             >

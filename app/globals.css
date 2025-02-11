@@ -103,11 +103,11 @@
   }
 
   .glass-2 {
-    @apply border border-border/15 border-t-border/10 bg-gradient-to-b from-card/100 to-card/80 dark:border-b-0 dark:border-border/5 dark:border-t-border/10 dark:from-card/10 dark:to-card/5;
+    @apply border border-border/15 bg-gradient-to-b from-card/100 to-card/80 dark:border-b-0 dark:border-border/5 dark:border-t-border/10 dark:from-card/10 dark:to-card/5;
   }
 
   .glass-3 {
-    @apply border border-b-0 border-border/5 border-t-border/15 bg-gradient-to-b from-card/30 to-card/20;
+    @apply border border-border/15 bg-gradient-to-b from-card/30 to-card/20 dark:border-b-0 dark:border-border/5 dark:border-t-border/10;
   }
 
   .glass-4 {
