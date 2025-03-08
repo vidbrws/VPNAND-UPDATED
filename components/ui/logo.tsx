@@ -25,6 +25,7 @@ export default function Logo({
 }: LogoProps) {
   return (
     <div
+      data-slot="logo"
       className={cn("flex items-center gap-2 text-sm font-medium", className)}
       {...props}
     >

@@ -25,18 +25,14 @@ export interface BeamProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof beamVariants> {}
 
-const Beam = React.forwardRef<HTMLDivElement, BeamProps>(
-  ({ className, tone, ...props }, ref) => {
-    return (
-      <div
-        ref={ref}
-        className={cn(beamVariants({ tone, className }))}
-        {...props}
-      />
-    );
-  },
-);
-
-Beam.displayName = "Beam";
+function Beam({ className, tone, ...props }: BeamProps) {
+  return (
+    <div
+      data-slot="beam"
+      className={cn(beamVariants({ tone, className }))}
+      {...props}
+    />
+  );
+}
 
 export { Beam, beamVariants };
