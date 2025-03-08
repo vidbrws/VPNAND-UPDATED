@@ -14,15 +14,15 @@ import { Section } from "../../ui/section";
 export default function Items() {
   return (
     <Section>
-      <div className="mx-auto flex max-w-container flex-col items-center gap-6 sm:gap-20">
-        <h2 className="max-w-[560px] text-center text-3xl font-semibold leading-tight sm:text-5xl sm:leading-tight">
+      <div className="max-w-container mx-auto flex flex-col items-center gap-6 sm:gap-20">
+        <h2 className="max-w-[560px] text-center text-3xl leading-tight font-semibold sm:text-5xl sm:leading-tight">
           Everything you need. Nothing you don&apos;t.
         </h2>
         <div className="grid auto-rows-fr grid-cols-2 gap-0 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
           <Item>
             <ItemTitle className="flex items-center gap-2">
               <ItemIcon>
-                <ScanFaceIcon className="h-5 w-5 stroke-1" />
+                <ScanFaceIcon className="size-5 stroke-1" />
               </ItemIcon>
               Accessibility first
             </ItemTitle>
@@ -33,7 +33,7 @@ export default function Items() {
           <Item>
             <ItemTitle className="flex items-center gap-2">
               <ItemIcon>
-                <MonitorSmartphoneIcon className="h-5 w-5 stroke-1" />
+                <MonitorSmartphoneIcon className="size-5 stroke-1" />
               </ItemIcon>
               Responsive design
             </ItemTitle>
@@ -44,7 +44,7 @@ export default function Items() {
           <Item>
             <ItemTitle className="flex items-center gap-2">
               <ItemIcon>
-                <EclipseIcon className="h-5 w-5 stroke-1" />
+                <EclipseIcon className="size-5 stroke-1" />
               </ItemIcon>
               Light and dark mode
             </ItemTitle>
@@ -55,7 +55,7 @@ export default function Items() {
           <Item>
             <ItemTitle className="flex items-center gap-2">
               <ItemIcon>
-                <BlocksIcon className="h-5 w-5 stroke-1" />
+                <BlocksIcon className="size-5 stroke-1" />
               </ItemIcon>
               Easy to customize
             </ItemTitle>
@@ -66,7 +66,7 @@ export default function Items() {
           <Item>
             <ItemTitle className="flex items-center gap-2">
               <ItemIcon>
-                <FastForwardIcon className="h-5 w-5 stroke-1" />
+                <FastForwardIcon className="size-5 stroke-1" />
               </ItemIcon>
               Top-level performance
             </ItemTitle>
@@ -77,7 +77,7 @@ export default function Items() {
           <Item>
             <ItemTitle className="flex items-center gap-2">
               <ItemIcon>
-                <RocketIcon className="h-5 w-5 stroke-1" />
+                <RocketIcon className="size-5 stroke-1" />
               </ItemIcon>
               Production ready
             </ItemTitle>
@@ -88,7 +88,7 @@ export default function Items() {
           <Item>
             <ItemTitle className="flex items-center gap-2">
               <ItemIcon>
-                <LanguagesIcon className="h-5 w-5 stroke-1" />
+                <LanguagesIcon className="size-5 stroke-1" />
               </ItemIcon>
               Made for localisation
             </ItemTitle>
@@ -99,7 +99,7 @@ export default function Items() {
           <Item>
             <ItemTitle className="flex items-center gap-2">
               <ItemIcon>
-                <SquarePenIcon className="h-5 w-5 stroke-1" />
+                <SquarePenIcon className="size-5 stroke-1" />
               </ItemIcon>
               CMS friendly
             </ItemTitle>

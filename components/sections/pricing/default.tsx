@@ -42,7 +42,7 @@ const plans: Plan[] = [
   },
   {
     name: "Pro",
-    icon: <User className="h-4 w-4" />,
+    icon: <User className="size-4" />,
     description: "For early-stage founders, solopreneurs and indie devs",
     price: 99,
     priceNote: "Lifetime access. Free updates. No recurring fees.",
@@ -63,7 +63,7 @@ const plans: Plan[] = [
   },
   {
     name: "Pro Team",
-    icon: <Users className="h-4 w-4" />,
+    icon: <Users className="size-4" />,
     description: "For teams and agencies working on cool products together",
     price: 499,
     priceNote: "Lifetime access. Free updates. No recurring fees.",
@@ -156,7 +156,7 @@ export default function Pricing() {
                       key={feature}
                       className="flex items-center gap-2 text-sm"
                     >
-                      <CircleCheckBig className="text-muted-foreground h-4 w-4 shrink-0" />
+                      <CircleCheckBig className="text-muted-foreground size-4 shrink-0" />
                       {feature}
                     </li>
                   ))}

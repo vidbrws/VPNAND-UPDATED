@@ -29,7 +29,7 @@ export default function Hero() {
 
   return (
     <Section className="fade-bottom overflow-hidden pb-0 sm:pb-0 md:pb-0">
-      <div className="mx-auto flex max-w-container flex-col gap-12 pt-16 sm:gap-24">
+      <div className="max-w-container mx-auto flex flex-col gap-12 pt-16 sm:gap-24">
         <div className="flex flex-col items-center gap-6 text-center sm:gap-12">
           <Badge variant="outline" className="animate-appear">
             <span className="text-muted-foreground">
@@ -40,24 +40,24 @@ export default function Hero() {
               className="flex items-center gap-1"
             >
               Get started
-              <ArrowRightIcon className="h-3 w-3" />
+              <ArrowRightIcon className="size-3" />
             </a>
           </Badge>
-          <h1 className="relative z-10 inline-block animate-appear bg-linear-to-r from-foreground to-foreground bg-clip-text text-4xl font-semibold leading-tight text-transparent drop-shadow-2xl sm:text-6xl sm:leading-tight md:text-8xl md:leading-tight dark:to-muted-foreground">
+          <h1 className="animate-appear from-foreground to-foreground dark:to-muted-foreground relative z-10 inline-block bg-linear-to-r bg-clip-text text-4xl leading-tight font-semibold text-transparent drop-shadow-2xl sm:text-6xl sm:leading-tight md:text-8xl md:leading-tight">
             Give your big idea the website it deserves
           </h1>
-          <p className="text-md relative z-10 max-w-[550px] animate-appear font-medium text-muted-foreground opacity-0 delay-100 sm:text-xl">
+          <p className="text-md animate-appear text-muted-foreground relative z-10 max-w-[550px] font-medium opacity-0 delay-100 sm:text-xl">
             Landing page components built with React, Shadcn/ui and Tailwind
             that will make your website feel premium.
           </p>
-          <div className="relative z-10 flex animate-appear justify-center gap-4 opacity-0 delay-300">
-            <div className="relative z-10 flex animate-appear justify-center gap-4 opacity-0 delay-300">
+          <div className="animate-appear relative z-10 flex justify-center gap-4 opacity-0 delay-300">
+            <div className="animate-appear relative z-10 flex justify-center gap-4 opacity-0 delay-300">
               <Button variant="default" size="lg" asChild>
                 <a href={siteConfig.getStartedUrl}>Get Started</a>
               </Button>
               <Button variant="glow" size="lg" asChild>
                 <a href={siteConfig.links.github}>
-                  <Github className="mr-2 h-4 w-4" /> Github
+                  <Github className="mr-2 size-4" /> Github
                 </a>
               </Button>
             </div>

@@ -13,8 +13,8 @@ import { siteConfig } from "@/config/site";
 export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 -mb-4 px-4 pb-4">
-      <div className="fade-bottom absolute left-0 h-24 w-full bg-background/15 backdrop-blur-lg"></div>
-      <div className="relative mx-auto max-w-container">
+      <div className="fade-bottom bg-background/15 absolute left-0 h-24 w-full backdrop-blur-lg"></div>
+      <div className="max-w-container relative mx-auto">
         <NavbarComponent>
           <NavbarLeft>
             <a
@@ -40,7 +40,7 @@ export default function Navbar() {
                   size="icon"
                   className="shrink-0 md:hidden"
                 >
-                  <Menu className="h-5 w-5" />
+                  <Menu className="size-5" />
                   <span className="sr-only">Toggle navigation menu</span>
                 </Button>
               </SheetTrigger>
