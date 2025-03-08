@@ -9,6 +9,11 @@ A comprehensive collection of production-ready website components built with Nex
 
 <img src="https://launchuicomponents.com/preview.gif" alt="Launch UI components mockups" />
 
+> [!TIP]
+> **Tailwind v4 + React 19:**
+> Launch UI v2.0 adds full support for Tailwind v4, React 19 and Next.js 15.
+> If you're using Tailwind 3, a version that supports it is still maintained on a [separate branch](https://github.com/launch-ui/launch-ui/tree/tailwind-3).
+
 ## 🚀 Quick Start
 
 1. Install dependencies:
