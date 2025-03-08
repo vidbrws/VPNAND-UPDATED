@@ -11,7 +11,7 @@ import { siteConfig } from "@/config/site";
 export default function Logos() {
   return (
     <Section>
-      <div className="mx-auto flex max-w-container flex-col items-center gap-8 text-center">
+      <div className="max-w-container mx-auto flex flex-col items-center gap-8 text-center">
         <div className="flex flex-col items-center gap-6">
           <Badge variant="outline" className="border-brand/30 text-brand">
             Last updated: {siteConfig.stats.updated}
@@ -24,8 +24,8 @@ export default function Logos() {
           <Logo image={Figma} name="Figma" />
           <Logo image={React} name="React" version="19.0.0" />
           <Logo image={TypeScript} name="TypeScript" version="5.6.3" />
-          <Logo image={ShadcnUi} name="Shadcn/ui" version="2.1.8" />
-          <Logo image={Tailwind} name="Tailwind" version="3.4.14" />
+          <Logo image={ShadcnUi} name="Shadcn/ui" version="2.4.0" badge="New" />
+          <Logo image={Tailwind} name="Tailwind" version="4.0" badge="New" />
         </div>
       </div>
     </Section>
