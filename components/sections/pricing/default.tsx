@@ -38,7 +38,7 @@ const plans: Plan[] = [
       "5 custom animations",
     ],
     featured: false,
-    classes: "glass-1 to-transparent dark:glass-2 hidden lg:flex",
+    classes: "glass-1 to-transparent dark:glass-3 hidden lg:flex",
   },
   {
     name: "Pro",
@@ -86,26 +86,26 @@ export default function Pricing() {
     <Section>
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-12">
         <div className="flex flex-col items-center gap-4 px-4 text-center sm:gap-8">
-          <h2 className="text-3xl font-semibold leading-tight sm:text-5xl sm:leading-tight">
+          <h2 className="text-3xl leading-tight font-semibold sm:text-5xl sm:leading-tight">
             Build your dream landing page, today.
           </h2>
-          <p className="text-md max-w-[600px] font-medium text-muted-foreground sm:text-xl">
+          <p className="text-md text-muted-foreground max-w-[600px] font-medium sm:text-xl">
             Get lifetime access to all the components. No recurring fees. Just
             simple, transparent pricing.
           </p>
         </div>
-        <div className="mx-auto grid max-w-container grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="max-w-container mx-auto grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {plans.map((plan) => (
             <div
               key={plan.name}
               className={cn(
-                "relative flex max-w-container flex-col gap-6 overflow-hidden rounded-2xl p-8 shadow-xl",
+                "max-w-container relative flex flex-col gap-6 overflow-hidden rounded-2xl p-8 shadow-xl",
                 plan.classes,
               )}
             >
               <hr
                 className={cn(
-                  "absolute left-[10%] top-0 h-[1px] w-[80%] border-0 bg-linear-to-r from-transparent via-foreground/60 to-transparent",
+                  "via-foreground/60 absolute top-0 left-[10%] h-[1px] w-[80%] border-0 bg-linear-to-r from-transparent to-transparent",
                   plan.featured && "via-brand",
                 )}
               />
@@ -113,19 +113,19 @@ export default function Pricing() {
                 <div className="flex flex-col gap-2">
                   <h2 className="flex items-center gap-2 font-bold">
                     {plan.icon && (
-                      <div className="flex items-center gap-2 text-muted-foreground">
+                      <div className="text-muted-foreground flex items-center gap-2">
                         {plan.icon}
                       </div>
                     )}
                     {plan.name}
                   </h2>
-                  <p className="max-w-[220px] text-sm text-muted-foreground">
+                  <p className="text-muted-foreground max-w-[220px] text-sm">
                     {plan.description}
                   </p>
                 </div>
                 <div className="flex items-center gap-3 lg:flex-col lg:items-start xl:flex-row xl:items-center">
                   <div className="flex items-baseline gap-1">
-                    <span className="text-2xl font-bold text-muted-foreground">
+                    <span className="text-muted-foreground text-2xl font-bold">
                       $
                     </span>
                     <span className="text-6xl font-bold">{plan.price}</span>
@@ -134,7 +134,7 @@ export default function Pricing() {
                     {plan.price > 0 && (
                       <>
                         <span className="text-sm">one-time payment</span>
-                        <span className="text-sm text-muted-foreground">
+                        <span className="text-muted-foreground text-sm">
                           plus local taxes
                         </span>
                       </>
@@ -144,7 +144,7 @@ export default function Pricing() {
                 <Button variant={plan.cta.variant} size="lg" asChild>
                   <Link href={plan.cta.href}>{plan.cta.label}</Link>
                 </Button>
-                <p className="min-h-[40px] max-w-[220px] text-sm text-muted-foreground">
+                <p className="text-muted-foreground min-h-[40px] max-w-[220px] text-sm">
                   {plan.priceNote}
                 </p>
                 <hr className="border-input" />
@@ -156,7 +156,7 @@ export default function Pricing() {
                       key={feature}
                       className="flex items-center gap-2 text-sm"
                     >
-                      <CircleCheckBig className="h-4 w-4 shrink-0 text-muted-foreground" />
+                      <CircleCheckBig className="text-muted-foreground h-4 w-4 shrink-0" />
                       {feature}
                     </li>
                   ))}

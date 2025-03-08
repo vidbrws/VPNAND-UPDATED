@@ -3,25 +3,20 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const beamVariants = cva(
-  "relative after:content-[''] after:absolute after:inset-0 after:rounded-full after:scale-2",
+  "relative after:content-[''] after:absolute after:inset-0 after:rounded-full after:scale-200",
   {
     variants: {
       tone: {
         default:
-          "after:bg-[radial-gradient(ellipse_at_center,_hsla(var(--foreground)/.3)_10%,_hsla(var(--foreground)/0)_60%)]",
+          "after:bg-radial after:from-foreground/30 after:from-10% after:to-foreground/0 after:to-60%",
         brand:
-          "after:bg-[radial-gradient(ellipse_at_center,_hsla(var(--brand)/.3)_10%,_hsla(var(--brand)/0)_60%)]",
+          "after:bg-radial after:from-brand/30 after:from-10% after:to-brand/0 after:to-60%",
         brandLight:
-          "after:bg-[radial-gradient(ellipse_at_center,_hsla(var(--brand-foreground)/.3)_10%,_hsla(var(--brand-foreground)/0)_60%)]",
-      },
-      size: {
-        default: "after:-lg",
-        large: "after:-xl",
+          "after:bg-radial after:from-brand-foreground/30 after:from-10% after:to-brand-foreground/0 after:to-60%",
       },
     },
     defaultVariants: {
       tone: "default",
-      size: "default",
     },
   },
 );
@@ -31,11 +26,11 @@ export interface BeamProps
     VariantProps<typeof beamVariants> {}
 
 const Beam = React.forwardRef<HTMLDivElement, BeamProps>(
-  ({ className, tone, size, ...props }, ref) => {
+  ({ className, tone, ...props }, ref) => {
     return (
       <div
         ref={ref}
-        className={cn(beamVariants({ tone, size, className }))}
+        className={cn(beamVariants({ tone, className }))}
         {...props}
       />
     );
