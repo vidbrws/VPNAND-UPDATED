@@ -3,7 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const beamVariants = cva(
-  "relative after:content-[''] after:absolute after:inset-0 after:rounded-full after:scale-[2]",
+  "relative after:content-[''] after:absolute after:inset-0 after:rounded-full after:scale-2",
   {
     variants: {
       tone: {

@@ -105,7 +105,7 @@ export default function Pricing() {
             >
               <hr
                 className={cn(
-                  "absolute left-[10%] top-0 h-[1px] w-[80%] border-0 bg-gradient-to-r from-transparent via-foreground/60 to-transparent",
+                  "absolute left-[10%] top-0 h-[1px] w-[80%] border-0 bg-linear-to-r from-transparent via-foreground/60 to-transparent",
                   plan.featured && "via-brand",
                 )}
               />

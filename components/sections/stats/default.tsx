@@ -11,7 +11,7 @@ export default function Stats() {
               used by
             </div>
             <div className="flex items-baseline gap-2">
-              <div className="bg-gradient-to-r from-foreground to-foreground bg-clip-text text-4xl font-medium text-transparent drop-shadow-[2px_1px_24px_hsla(var(--brand-foreground))] transition-all duration-300 sm:text-5xl md:text-6xl dark:to-brand">
+              <div className="bg-linear-to-r from-foreground to-foreground bg-clip-text text-4xl font-medium text-transparent drop-shadow-[2px_1px_24px_hsla(var(--brand-foreground))] transition-all duration-300 sm:text-5xl md:text-6xl dark:to-brand">
                 {Math.round(siteConfig.stats.figma / 100) / 10}
               </div>
               <div className="text-2xl font-semibold text-brand">k</div>
@@ -25,7 +25,7 @@ export default function Stats() {
               over
             </div>
             <div className="flex items-baseline gap-2">
-              <div className="bg-gradient-to-r from-foreground to-foreground bg-clip-text text-4xl font-medium text-transparent drop-shadow-[2px_1px_24px_hsla(var(--brand-foreground))] transition-all duration-300 sm:text-5xl md:text-6xl dark:to-brand">
+              <div className="bg-linear-to-r from-foreground to-foreground bg-clip-text text-4xl font-medium text-transparent drop-shadow-[2px_1px_24px_hsla(var(--brand-foreground))] transition-all duration-300 sm:text-5xl md:text-6xl dark:to-brand">
                 {siteConfig.stats.github}
               </div>
             </div>
@@ -38,7 +38,7 @@ export default function Stats() {
               already
             </div>
             <div className="flex items-baseline gap-2">
-              <div className="bg-gradient-to-r from-foreground to-foreground bg-clip-text text-4xl font-medium text-transparent drop-shadow-[2px_1px_24px_hsla(var(--brand-foreground))] transition-all duration-300 sm:text-5xl md:text-6xl dark:to-brand">
+              <div className="bg-linear-to-r from-foreground to-foreground bg-clip-text text-4xl font-medium text-transparent drop-shadow-[2px_1px_24px_hsla(var(--brand-foreground))] transition-all duration-300 sm:text-5xl md:text-6xl dark:to-brand">
                 {Math.round(siteConfig.stats.cli / 100) / 10}
               </div>
               <div className="text-2xl font-semibold text-brand">k</div>
@@ -51,7 +51,7 @@ export default function Stats() {
             <div className="text-sm font-semibold text-muted-foreground">
               includes
             </div>
-            <div className="bg-gradient-to-r from-foreground to-foreground bg-clip-text text-4xl font-medium text-transparent drop-shadow-[2px_1px_24px_hsla(var(--brand-foreground))] transition-all duration-300 sm:text-5xl md:text-6xl dark:to-brand">
+            <div className="bg-linear-to-r from-foreground to-foreground bg-clip-text text-4xl font-medium text-transparent drop-shadow-[2px_1px_24px_hsla(var(--brand-foreground))] transition-all duration-300 sm:text-5xl md:text-6xl dark:to-brand">
               {siteConfig.stats.components}
             </div>
             <div className="text-pretty text-sm font-semibold text-muted-foreground">
