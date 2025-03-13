@@ -1,27 +1,9 @@
-import { cn } from "@/lib/utils";
 import { Section } from "../../ui/section";
-import { Button } from "../../ui/button";
-import { CircleCheckBig, User, Users } from "lucide-react";
-import Link from "next/link";
+import { User, Users } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { PricingColumn, PricingColumnProps } from "../../ui/pricing-column";
 
-type Plan = {
-  name: string;
-  icon?: React.ReactNode;
-  description: string;
-  price: number;
-  priceNote: string;
-  cta: {
-    variant: "glow" | "default";
-    label: string;
-    href: string;
-  };
-  features: string[];
-  featured: boolean;
-  classes?: string;
-};
-
-const plans: Plan[] = [
+const plans: PricingColumnProps[] = [
   {
     name: "Free",
     description: "For everyone starting out on a website for their big idea",
@@ -37,8 +19,7 @@ const plans: Plan[] = [
       "36 components",
       "5 custom animations",
     ],
-    featured: false,
-    classes: "glass-1 to-transparent dark:glass-3 hidden lg:flex",
+    variant: "default",
   },
   {
     name: "Pro",
@@ -57,9 +38,7 @@ const plans: Plan[] = [
       `${siteConfig.stats.illustrations} illustrations`,
       `${siteConfig.stats.animations} custom animations`,
     ],
-    featured: true,
-    classes:
-      "glass-3 from-card/100 to-card/100 dark:glass-4 after:content-[''] after:absolute after:-top-[128px] after:left-1/2 after:h-[128px] after:w-[100%] after:max-w-[960px] after:-translate-x-1/2 after:rounded-[50%] after:bg-brand-foreground/70 after:blur-[72px]",
+    variant: "glow-brand",
   },
   {
     name: "Pro Team",
@@ -75,9 +54,7 @@ const plans: Plan[] = [
     features: [
       "All the templates, components and sections available for your entire team",
     ],
-    featured: false,
-    classes:
-      "glass-2 to-trasparent dark:glass-3 after:content-[''] after:absolute after:-top-[128px] after:left-1/2 after:h-[128px] after:w-[100%] after:max-w-[960px] after:-translate-x-1/2 after:rounded-[50%] dark:after:bg-foreground/30 after:blur-[72px]",
+    variant: "glow",
   },
 ];
 
@@ -96,73 +73,17 @@ export default function Pricing() {
         </div>
         <div className="max-w-container mx-auto grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {plans.map((plan) => (
-            <div
+            <PricingColumn
               key={plan.name}
-              className={cn(
-                "max-w-container relative flex flex-col gap-6 overflow-hidden rounded-2xl p-8 shadow-xl",
-                plan.classes,
-              )}
-            >
-              <hr
-                className={cn(
-                  "via-foreground/60 absolute top-0 left-[10%] h-[1px] w-[80%] border-0 bg-linear-to-r from-transparent to-transparent",
-                  plan.featured && "via-brand",
-                )}
-              />
-              <div className="flex flex-col gap-7">
-                <div className="flex flex-col gap-2">
-                  <h2 className="flex items-center gap-2 font-bold">
-                    {plan.icon && (
-                      <div className="text-muted-foreground flex items-center gap-2">
-                        {plan.icon}
-                      </div>
-                    )}
-                    {plan.name}
-                  </h2>
-                  <p className="text-muted-foreground max-w-[220px] text-sm">
-                    {plan.description}
-                  </p>
-                </div>
-                <div className="flex items-center gap-3 lg:flex-col lg:items-start xl:flex-row xl:items-center">
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-muted-foreground text-2xl font-bold">
-                      $
-                    </span>
-                    <span className="text-6xl font-bold">{plan.price}</span>
-                  </div>
-                  <div className="flex min-h-[40px] flex-col">
-                    {plan.price > 0 && (
-                      <>
-                        <span className="text-sm">one-time payment</span>
-                        <span className="text-muted-foreground text-sm">
-                          plus local taxes
-                        </span>
-                      </>
-                    )}
-                  </div>
-                </div>
-                <Button variant={plan.cta.variant} size="lg" asChild>
-                  <Link href={plan.cta.href}>{plan.cta.label}</Link>
-                </Button>
-                <p className="text-muted-foreground min-h-[40px] max-w-[220px] text-sm">
-                  {plan.priceNote}
-                </p>
-                <hr className="border-input" />
-              </div>
-              <div>
-                <ul className="flex flex-col gap-2">
-                  {plan.features.map((feature) => (
-                    <li
-                      key={feature}
-                      className="flex items-center gap-2 text-sm"
-                    >
-                      <CircleCheckBig className="text-muted-foreground size-4 shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+              name={plan.name}
+              icon={plan.icon}
+              description={plan.description}
+              price={plan.price}
+              priceNote={plan.priceNote}
+              cta={plan.cta}
+              features={plan.features}
+              variant={plan.variant}
+            />
           ))}
         </div>
       </div>
