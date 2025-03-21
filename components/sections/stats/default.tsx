@@ -33,8 +33,8 @@ export default function Stats({
     },
     {
       label: "includes",
-      value: siteConfig.stats.components,
-      description: "React components and sections",
+      value: siteConfig.stats.sections,
+      description: "blocks and sections",
     },
   ],
 }: StatsProps) {

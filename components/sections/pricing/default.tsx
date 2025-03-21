@@ -3,11 +3,13 @@ import { User, Users } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { PricingColumn, PricingColumnProps } from "../../ui/pricing-column";
 import { ReactNode } from "react";
+import { cn } from "@/lib/utils";
 
 interface PricingProps {
-  title?: string;
-  description?: string;
+  title?: string | false;
+  description?: string | false;
   plans?: PricingColumnProps[] | false;
+  className?: string;
 }
 
 export default function Pricing({
@@ -25,9 +27,9 @@ export default function Pricing({
         href: "/docs/getting-started/introduction",
       },
       features: [
-        "9 landing page sections",
-        "36 components",
-        "5 custom animations",
+        "1 website template",
+        "9 blocks and sections",
+        "4 custom animations",
       ],
       variant: "default",
     },
@@ -43,8 +45,9 @@ export default function Pricing({
         href: siteConfig.pricing.pro,
       },
       features: [
-        `${siteConfig.stats.sections} landing page sections`,
-        `${siteConfig.stats.components} components`,
+        `${siteConfig.stats.websiteTemplates} website templates`,
+        `${siteConfig.stats.appTemplates} app templates`,
+        `${siteConfig.stats.sections} blocks and sections`,
         `${siteConfig.stats.illustrations} illustrations`,
         `${siteConfig.stats.animations} custom animations`,
       ],
@@ -67,18 +70,26 @@ export default function Pricing({
       variant: "glow",
     },
   ],
+  className = "",
 }: PricingProps) {
   return (
-    <Section>
+    <Section className={cn(className)}>
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-12">
-        <div className="flex flex-col items-center gap-4 px-4 text-center sm:gap-8">
-          <h2 className="text-3xl leading-tight font-semibold sm:text-5xl sm:leading-tight">
-            {title}
-          </h2>
-          <p className="text-md text-muted-foreground max-w-[600px] font-medium sm:text-xl">
-            {description}
-          </p>
-        </div>
+        {title ||
+          (description && (
+            <div className="flex flex-col items-center gap-4 px-4 text-center sm:gap-8">
+              {title && (
+                <h2 className="text-3xl leading-tight font-semibold sm:text-5xl sm:leading-tight">
+                  {title}
+                </h2>
+              )}
+              {description && (
+                <p className="text-md text-muted-foreground max-w-[600px] font-medium sm:text-xl">
+                  {description}
+                </p>
+              )}
+            </div>
+          ))}
         {plans !== false && plans.length > 0 && (
           <div className="max-w-container mx-auto grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {plans.map((plan) => (
