@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
 
 interface ScreenshotProps {
   srcLight: string;
@@ -21,18 +23,22 @@ export default function Screenshot({
   className,
 }: ScreenshotProps) {
   const { resolvedTheme } = useTheme();
-  let src;
+  const [src, setSrc] = useState<string | null>(null);
 
-  switch (resolvedTheme) {
-    case "light":
-      src = srcLight;
-      break;
-    case "dark":
-      src = srcDark || srcLight;
-      break;
-    default:
-      src = srcDark || srcLight;
-      break;
+  useEffect(() => {
+    if (resolvedTheme) {
+      setSrc(resolvedTheme === "light" ? srcLight : srcDark || srcLight);
+    }
+  }, [resolvedTheme, srcLight, srcDark]);
+
+  if (!src) {
+    return (
+      <div
+        style={{ width, height }}
+        className={cn("bg-muted", className)}
+        aria-label={alt}
+      />
+    );
   }
 
   return (
