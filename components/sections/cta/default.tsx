@@ -3,6 +3,7 @@ import { Button, type ButtonProps } from "../../ui/button";
 import { siteConfig } from "@/config/site";
 import Glow from "../../ui/glow";
 import { ReactNode } from "react";
+import { cn } from "@/lib/utils";
 
 interface CTAButtonProps {
   href: string;
@@ -15,6 +16,7 @@ interface CTAButtonProps {
 interface CTAProps {
   title?: string;
   buttons?: CTAButtonProps[] | false;
+  className?: string;
 }
 
 export default function CTA({
@@ -26,9 +28,10 @@ export default function CTA({
       variant: "default",
     },
   ],
+  className,
 }: CTAProps) {
   return (
-    <Section className="group relative overflow-hidden">
+    <Section className={cn("group relative overflow-hidden", className)}>
       <div className="max-w-container relative z-10 mx-auto flex flex-col items-center gap-6 text-center sm:gap-8">
         <h2 className="max-w-[640px] text-3xl leading-tight font-semibold sm:text-5xl sm:leading-tight">
           {title}

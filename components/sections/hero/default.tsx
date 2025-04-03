@@ -8,6 +8,7 @@ import { siteConfig } from "@/config/site";
 import Github from "../../logos/github";
 import { ReactNode } from "react";
 import Screenshot from "../../ui/screenshot";
+import { cn } from "@/lib/utils";
 
 interface HeroButtonProps {
   href: string;
@@ -23,6 +24,7 @@ interface HeroProps {
   mockup?: ReactNode | false;
   badge?: ReactNode | false;
   buttons?: HeroButtonProps[] | false;
+  className?: string;
 }
 
 export default function Hero({
@@ -35,6 +37,7 @@ export default function Hero({
       alt="Launch UI app screenshot"
       width={1248}
       height={765}
+      className="w-full"
     />
   ),
   badge = (
@@ -61,9 +64,15 @@ export default function Hero({
       icon: <Github className="mr-2 size-4" />,
     },
   ],
+  className,
 }: HeroProps) {
   return (
-    <Section className="fade-bottom overflow-hidden pb-0 sm:pb-0 md:pb-0">
+    <Section
+      className={cn(
+        "fade-bottom overflow-hidden pb-0 sm:pb-0 md:pb-0",
+        className,
+      )}
+    >
       <div className="max-w-container mx-auto flex flex-col gap-12 pt-16 sm:gap-24">
         <div className="flex flex-col items-center gap-6 text-center sm:gap-12">
           {badge !== false && badge}

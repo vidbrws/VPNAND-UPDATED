@@ -10,6 +10,7 @@ import { Menu } from "lucide-react";
 import LaunchUI from "../../logos/launch-ui";
 import { siteConfig } from "@/config/site";
 import { ReactNode } from "react";
+import { cn } from "@/lib/utils";
 
 interface NavbarLink {
   text: string;
@@ -33,6 +34,7 @@ interface NavbarProps {
   actions?: NavbarActionProps[];
   showNavigation?: boolean;
   customNavigation?: ReactNode;
+  className?: string;
 }
 
 export default function Navbar({
@@ -55,9 +57,10 @@ export default function Navbar({
   ],
   showNavigation = true,
   customNavigation,
+  className,
 }: NavbarProps) {
   return (
-    <header className="sticky top-0 z-50 -mb-4 px-4 pb-4">
+    <header className={cn("sticky top-0 z-50 -mb-4 px-4 pb-4", className)}>
       <div className="fade-bottom bg-background/15 absolute left-0 h-24 w-full backdrop-blur-lg"></div>
       <div className="max-w-container relative mx-auto">
         <NavbarComponent>

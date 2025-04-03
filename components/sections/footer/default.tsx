@@ -8,6 +8,7 @@ import {
 import LaunchUI from "../../logos/launch-ui";
 import { siteConfig } from "@/config/site";
 import { ReactNode } from "react";
+import { cn } from "@/lib/utils";
 
 interface FooterLink {
   text: string;
@@ -26,6 +27,7 @@ interface FooterProps {
   copyright?: string;
   policies?: FooterLink[];
   showModeToggle?: boolean;
+  className?: string;
 }
 
 export default function FooterSection({
@@ -62,9 +64,10 @@ export default function FooterSection({
     { text: "Terms of Service", href: siteConfig.url },
   ],
   showModeToggle = true,
+  className,
 }: FooterProps) {
   return (
-    <footer className="bg-background w-full px-4">
+    <footer className={cn("bg-background w-full px-4", className)}>
       <div className="max-w-container mx-auto">
         <Footer>
           <FooterContent>
