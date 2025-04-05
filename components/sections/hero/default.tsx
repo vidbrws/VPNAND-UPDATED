@@ -28,8 +28,8 @@ interface HeroProps {
 }
 
 export default function Hero({
-  title = "Give your big idea the website it deserves",
-  description = "Landing page components built with React, Shadcn/ui and Tailwind that will make your website feel premium.",
+  title = "Give your big idea the design it deserves",
+  description = "Professionally designed blocks and templates built with React, Shadcn/ui and Tailwind that will help your product stand out.",
   mockup = (
     <Screenshot
       srcLight="/app-light.png"
