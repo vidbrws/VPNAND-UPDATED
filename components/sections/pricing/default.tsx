@@ -31,6 +31,7 @@ export default function Pricing({
         "4 custom animations",
       ],
       variant: "default",
+      className: "hidden lg:flex",
     },
     {
       name: "Pro",
@@ -101,6 +102,7 @@ export default function Pricing({
                 cta={plan.cta}
                 features={plan.features}
                 variant={plan.variant}
+                className={plan.className}
               />
             ))}
           </div>
