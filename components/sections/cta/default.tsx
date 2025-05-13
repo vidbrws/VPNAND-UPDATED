@@ -1,9 +1,10 @@
-import { Section } from "../../ui/section";
-import { Button, type ButtonProps } from "../../ui/button";
-import { siteConfig } from "@/config/site";
-import Glow from "../../ui/glow";
 import { ReactNode } from "react";
 import { cn } from "@/lib/utils";
+import { siteConfig } from "@/config/site";
+
+import { Section } from "../../ui/section";
+import { Button, type ButtonProps } from "../../ui/button";
+import Glow from "../../ui/glow";
 
 interface CTAButtonProps {
   href: string;

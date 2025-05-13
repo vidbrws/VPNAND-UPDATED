@@ -1,3 +1,7 @@
+import { ReactNode } from "react";
+import { siteConfig } from "@/config/site";
+import Link from "next/link";
+
 import { Section } from "../../ui/section";
 import {
   Accordion,
@@ -5,9 +9,6 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "../../ui/accordion";
-import Link from "next/link";
-import { siteConfig } from "@/config/site";
-import { ReactNode } from "react";
 
 interface FAQItemProps {
   question: string;
@@ -127,20 +128,15 @@ export default function FAQ({
       answer: (
         <>
           <p className="text-muted-foreground mb-4 max-w-[580px]">
-            Actually, yes! I&apos;m looking for beta testers and great examples
-            of Launch UI in action to feature on the website. Here&apos;s the
-            deal: you provide feedback to help me improve the product, and in
-            return, you get a huge discount plus a solid backlink for your
-            product.
-          </p>
-          <p className="text-muted-foreground mb-4 max-w-[580px]">
-            If this interests you, don&apos;t hesitate to{" "}
-            <Link
+            Actually, yes! I&apos;m always acively looking for beta testers of
+            new features. If you are interested in exchanging feedback for a
+            discount, please contact me via{" "}
+            <a
               href={siteConfig.links.email}
-              className="text-foreground underline"
+              className="underline underline-offset-2"
             >
-              reach out by email
-            </Link>
+              email
+            </a>
             .
           </p>
         </>
