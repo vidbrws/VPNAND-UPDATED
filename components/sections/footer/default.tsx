@@ -1,15 +1,16 @@
 import { ReactNode } from "react";
-import { cn } from "@/lib/utils";
-import { siteConfig } from "@/config/site";
 
-import { ModeToggle } from "../../ui/mode-toggle";
+import { siteConfig } from "@/config/site";
+import { cn } from "@/lib/utils";
+
+import LaunchUI from "../../logos/launch-ui";
 import {
   Footer,
-  FooterColumn,
   FooterBottom,
+  FooterColumn,
   FooterContent,
 } from "../../ui/footer";
-import LaunchUI from "../../logos/launch-ui";
+import { ModeToggle } from "../../ui/mode-toggle";
 
 interface FooterLink {
   text: string;

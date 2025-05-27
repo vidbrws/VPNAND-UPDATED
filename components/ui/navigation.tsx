@@ -1,9 +1,13 @@
 "use client";
 
-import * as React from "react";
 import Link from "next/link";
+import * as React from "react";
+import { ReactNode } from "react";
 
+import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
+
+import LaunchUI from "../logos/launch-ui";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -13,9 +17,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "./navigation-menu";
-import LaunchUI from "../logos/launch-ui";
-import { siteConfig } from "@/config/site";
-import { ReactNode } from "react";
 
 interface ComponentItem {
   title: string;

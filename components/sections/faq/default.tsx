@@ -1,14 +1,15 @@
-import { ReactNode } from "react";
-import { siteConfig } from "@/config/site";
 import Link from "next/link";
+import { ReactNode } from "react";
 
-import { Section } from "../../ui/section";
+import { siteConfig } from "@/config/site";
+
 import {
   Accordion,
+  AccordionContent,
   AccordionItem,
   AccordionTrigger,
-  AccordionContent,
 } from "../../ui/accordion";
+import { Section } from "../../ui/section";
 
 interface FAQItemProps {
   question: string;

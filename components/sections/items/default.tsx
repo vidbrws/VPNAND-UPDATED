@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import {
   BlocksIcon,
   EclipseIcon,
@@ -9,8 +8,9 @@ import {
   ScanFaceIcon,
   SquarePenIcon,
 } from "lucide-react";
+import { ReactNode } from "react";
 
-import { Item, ItemIcon, ItemTitle, ItemDescription } from "../../ui/item";
+import { Item, ItemDescription,ItemIcon, ItemTitle } from "../../ui/item";
 import { Section } from "../../ui/section";
 
 interface ItemProps {

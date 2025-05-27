@@ -1,7 +1,10 @@
-import type { Metadata } from "next";
 import "@/app/globals.css";
-import { inter } from "@/lib/fonts";
+
+import type { Metadata } from "next";
+
 import { ThemeProvider } from "@/components/contexts/theme-provider";
+import { inter } from "@/lib/fonts";
+
 import { siteConfig } from "../config/site";
 
 export const metadata: Metadata = {

@@ -1,15 +1,16 @@
-import { siteConfig } from "@/config/site";
+import { ArrowRightIcon } from "lucide-react";
 import { ReactNode } from "react";
+
+import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
-import { Button, type ButtonProps } from "../../ui/button";
-import { Badge } from "../../ui/badge";
-import { ArrowRightIcon } from "lucide-react";
-import { Section } from "../../ui/section";
-import { Mockup, MockupFrame } from "../../ui/mockup";
-import Glow from "../../ui/glow";
 import Github from "../../logos/github";
+import { Badge } from "../../ui/badge";
+import { Button, type ButtonProps } from "../../ui/button";
+import Glow from "../../ui/glow";
+import { Mockup, MockupFrame } from "../../ui/mockup";
 import Screenshot from "../../ui/screenshot";
+import { Section } from "../../ui/section";
 
 interface HeroButtonProps {
   href: string;

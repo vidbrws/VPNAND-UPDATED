@@ -1,9 +1,11 @@
-import { cn } from "@/lib/utils";
-import { Button } from "./button";
+import { cva, type VariantProps } from "class-variance-authority";
 import { CircleCheckBig } from "lucide-react";
 import Link from "next/link";
 import { ReactNode } from "react";
-import { cva, type VariantProps } from "class-variance-authority";
+
+import { cn } from "@/lib/utils";
+
+import { Button } from "./button";
 
 const pricingColumnVariants = cva(
   "max-w-container relative flex flex-col gap-6 overflow-hidden rounded-2xl p-8 shadow-xl",
