@@ -34,8 +34,8 @@ export default function Hero({
   description = "Professionally designed blocks and templates built with React, Shadcn/ui and Tailwind that will help your product stand out.",
   mockup = (
     <Screenshot
-      srcLight="/app-light.png"
-      srcDark="/app-dark.png"
+      srcLight="/dashboard-light.png"
+      srcDark="/dashboard-dark.png"
       alt="Launch UI app screenshot"
       width={1248}
       height={765}
