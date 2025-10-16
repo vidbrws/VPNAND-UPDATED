@@ -62,7 +62,7 @@ export default function Hero({
       variant: "default",
     },
     {
-      href: siteConfig.links.github,
+      href: "https://vpnand.com/order-vpn",
       text: "Скачать",
       variant: "glow",
       icon: <DownloadIcon className="mr-2 size-5" />,
