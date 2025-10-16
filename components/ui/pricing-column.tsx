@@ -1,10 +1,10 @@
+"use client";
+
 import { cva, type VariantProps } from "class-variance-authority";
 import { CircleCheckBig } from "lucide-react";
 import Link from "next/link";
 import { ReactNode } from "react";
-
 import { cn } from "@/lib/utils";
-
 import { Button } from "./button";
 
 const pricingColumnVariants = cva(
@@ -13,7 +13,7 @@ const pricingColumnVariants = cva(
     variants: {
       variant: {
         default: "glass-1 to-transparent dark:glass-3",
-        glow: "glass-2 to-trasparent dark:glass-3 after:content-[''] after:absolute after:-top-[128px] after:left-1/2 after:h-[128px] after:w-[100%] after:max-w-[960px] after:-translate-x-1/2 after:rounded-[50%] dark:after:bg-foreground/30 after:blur-[72px]",
+        glow: "glass-2 to-transparent dark:glass-3 after:content-[''] after:absolute after:-top-[128px] after:left-1/2 after:h-[128px] after:w-[100%] after:max-w-[960px] after:-translate-x-1/2 after:rounded-[50%] dark:after:bg-foreground/30 after:blur-[72px]",
         "glow-brand":
           "glass-3 from-card/100 to-card/100 dark:glass-4 after:content-[''] after:absolute after:-top-[128px] after:left-1/2 after:h-[128px] after:w-[100%] after:max-w-[960px] after:-translate-x-1/2 after:rounded-[50%] after:bg-brand-foreground/70 after:blur-[72px]",
       },
@@ -21,7 +21,7 @@ const pricingColumnVariants = cva(
     defaultVariants: {
       variant: "default",
     },
-  },
+  }
 );
 
 export interface PricingColumnProps
@@ -31,7 +31,6 @@ export interface PricingColumnProps
   icon?: ReactNode;
   description: string;
   price: number;
-  priceNote: string;
   cta: {
     variant: "glow" | "default";
     label: string;
@@ -45,7 +44,6 @@ export function PricingColumn({
   icon,
   description,
   price,
-  priceNote,
   cta,
   features,
   variant,
@@ -53,54 +51,52 @@ export function PricingColumn({
   ...props
 }: PricingColumnProps) {
   return (
-    <div
-      className={cn(pricingColumnVariants({ variant, className }))}
-      {...props}
-    >
+    <div className={cn(pricingColumnVariants({ variant, className }))} {...props}>
+      {/* Верхний разделитель */}
       <hr
         className={cn(
           "via-foreground/60 absolute top-0 left-[10%] h-[1px] w-[80%] border-0 bg-linear-to-r from-transparent to-transparent",
-          variant === "glow-brand" && "via-brand",
+          variant === "glow-brand" && "via-brand"
         )}
       />
+
       <div className="flex flex-col gap-7">
+        {/* Название и описание */}
         <div className="flex flex-col gap-2">
           <h2 className="flex items-center gap-2 font-bold">
-            {icon && (
-              <div className="text-muted-foreground flex items-center gap-2">
-                {icon}
-              </div>
-            )}
+            {icon && <div className="text-muted-foreground flex items-center gap-2">{icon}</div>}
             {name}
           </h2>
-          <p className="text-muted-foreground max-w-[220px] text-sm">
+          <p className="text-muted-foreground line-through max-w-[220px] text-sm">
             {description}
           </p>
         </div>
+
+        {/* Цена */}
         <div className="flex items-center gap-3 lg:flex-col lg:items-start xl:flex-row xl:items-center">
           <div className="flex items-baseline gap-1">
-            <span className="text-muted-foreground text-2xl font-bold">$</span>
-            <span className="text-6xl font-bold">{price}</span>
-          </div>
-          <div className="flex min-h-[40px] flex-col">
-            {price > 0 && (
-              <>
-                <span className="text-sm">one-time payment</span>
-                <span className="text-muted-foreground text-sm">
-                  plus local taxes
-                </span>
-              </>
-            )}
+            <span className="text-6xl font-bold bg-gradient-to-b from-[#7ed981] to-[#5279a8] bg-clip-text text-transparent">
+              {price}
+            </span>
+            <span className=" bg-gradient-to-b from-[#7ed981] to-[#5279a8] bg-clip-text text-transparent text-2xl font-bold">₽</span>
           </div>
         </div>
-        <Button variant={cta.variant} size="lg" asChild>
-          <Link href={cta.href}>{cta.label}</Link>
-        </Button>
-        <p className="text-muted-foreground min-h-[40px] max-w-[220px] text-sm">
-          {priceNote}
-        </p>
+
+       <Button
+  size="lg"
+  asChild
+  className="bg-gradient-to-b from-[#9ae69c] to-[#5b7aa1] 
+             dark:from-[#9ae69c] dark:to-[#5e85b7]
+             text-white font-semibold hover:opacity-90 transition shadow-md"
+>
+  <Link href={cta.href}>{cta.label}</Link>
+</Button>
+
+
         <hr className="border-input" />
       </div>
+
+      {/* Список преимуществ */}
       <div>
         <ul className="flex flex-col gap-2">
           {features.map((feature) => (

@@ -7,10 +7,13 @@ import {
   RocketIcon,
   ScanFaceIcon,
   SquarePenIcon,
+  GlobeIcon,
+  ShieldIcon,
+  KeyRoundIcon,
 } from "lucide-react";
 import { ReactNode } from "react";
 
-import { Item, ItemDescription,ItemIcon, ItemTitle } from "../../ui/item";
+import { Item, ItemDescription, ItemIcon, ItemTitle } from "../../ui/item";
 import { Section } from "../../ui/section";
 
 interface ItemProps {
@@ -26,62 +29,67 @@ interface ItemsProps {
 }
 
 export default function Items({
-  title = "Everything you need. Nothing you don't.",
+  title = "Почему выбирают VPNand",
   items = [
     {
-      title: "Accessibility first",
-      description: "Fully WCAG 2.0 compliant, made with best a11y practices",
-      icon: <ScanFaceIcon className="size-5 stroke-1" />,
-    },
-    {
-      title: "Responsive design",
-      description: "Looks and works great on any device and screen size",
-      icon: <MonitorSmartphoneIcon className="size-5 stroke-1" />,
-    },
-    {
-      title: "Light and dark mode",
+      title: "Высокая скорость",
       description:
-        "Seamless switching between color schemes, 6 themes included",
-      icon: <EclipseIcon className="size-5 stroke-1" />,
-    },
-    {
-      title: "Easy to customize",
-      description: "Flexible options to match your product or brand",
-      icon: <BlocksIcon className="size-5 stroke-1" />,
-    },
-    {
-      title: "Top-level performance",
-      description: "Made for lightning-fast load times and smooth interactions",
+        "Без падений скорости. Смотрите YouTube, листайте ленту без долгой загрузки.",
       icon: <FastForwardIcon className="size-5 stroke-1" />,
     },
     {
-      title: "Production ready",
-      description: "Thoroughly tested and launch-prepared",
-      icon: <RocketIcon className="size-5 stroke-1" />,
+      title: "Анонимность",
+      description:
+        "Пара кликов — и ваши данные в безопасности. Мы защищаем ваш трафик, шифруя его от посторонних.",
+      icon: <ScanFaceIcon className="size-5 stroke-1" />,
     },
     {
-      title: "Made for localisation",
+      title: "Для всех устройств",
       description:
-        "Easy to implement support for multiple languages and regions",
-      icon: <LanguagesIcon className="size-5 stroke-1" />,
+        "Работает на Windows, macOS, Android, iOS и Linux. Просто скачайте приложение, вставьте ключ и подключитесь.",
+      icon: <MonitorSmartphoneIcon className="size-5 stroke-1" />,
     },
     {
-      title: "CMS friendly",
+      title: "Мы готовы поддержать",
       description:
-        "Built to work with your any headless content management system",
+        "Техподдержка ответит на возникшие вопросы. Напишите нам в WhatsApp, Telegram или на почту.",
       icon: <SquarePenIcon className="size-5 stroke-1" />,
+    },
+    {
+      title: "Никакой нагрузки",
+      description:
+        "VPNand работает, не нагружая устройство. Забудьте о нагревающемся телефоне.",
+      icon: <BlocksIcon className="size-5 stroke-1" />,
+    },
+    {
+      title: "Глобальные подключения",
+      description:
+        "Выберите любую страну соединения. Наши серверы располагаются в разных частях мира.",
+      icon: <GlobeIcon className="size-5 stroke-1" />,
+    },
+    {
+      title: "Не сохраняем логи",
+      description:
+        "Мы не храним историю ваших подключений и не передаем данные третьим лицам.",
+      icon: <ShieldIcon className="size-5 stroke-1" />,
+    },
+    {
+      title: "Обходим блокировки",
+      description:
+        "VPNand — доступ к сайтам и приложениям, заблокированным в вашем регионе. ",
+      icon: <KeyRoundIcon className="size-5 stroke-1" />,
     },
   ],
   className,
 }: ItemsProps) {
   return (
     <Section className={className}>
-      <div className="max-w-container mx-auto flex flex-col items-center gap-6 sm:gap-20">
-        <h2 className="max-w-[560px] text-center text-3xl leading-tight font-semibold sm:text-5xl sm:leading-tight">
+      <div className="max-w-container mx-auto flex flex-col md:mb-15 bg:mb-15 items-center gap-2 sm:gap-10">
+        <h2 className="max-w-[660px] text-center text-3xl leading-tight font-semibold sm:text-5xl sm:leading-tight">
           {title}
         </h2>
         {items !== false && items.length > 0 && (
-          <div className="grid auto-rows-fr grid-cols-2 gap-0 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
+          <div className="grid auto-rows-fr grid-cols-2  sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
             {items.map((item, index) => (
               <Item key={index}>
                 <ItemTitle className="flex items-center gap-2">
